@@ -1,14 +1,26 @@
 /* eslint-env node */
-require("@rushstack/eslint-patch/modern-module-resolution");
+require('@rushstack/eslint-patch/modern-module-resolution')
 
 module.exports = {
-  root: true,
-  extends: [
-    "plugin:vue/vue3-essential",
-    "eslint:recommended",
-    "@vue/eslint-config-prettier",
-  ],
-  parserOptions: {
-    ecmaVersion: "latest",
-  },
-};
+	root: true,
+	extends: [
+		'plugin:vue/vue3-essential',
+		'eslint:recommended',
+		'@vue/eslint-config-prettier',
+	],
+	parserOptions: {
+		ecmaVersion: 'latest',
+	},
+	rules: {
+		'linebreak-style': ['error', 'windows'],
+		'prettier/prettier': [
+			'error',
+			{
+				semi: false,
+				singleQuote: true,
+				useTabs: true,
+				endOfLine: 'auto',
+			},
+		],
+	},
+}
